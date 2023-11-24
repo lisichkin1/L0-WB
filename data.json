@@ -1,0 +1,22 @@
+[
+  {
+    "price_secondary": 1051,
+    "price_primary": 522,
+    "quantity_order": 1,
+    "quantity_left": 2
+  },
+  {
+    "price_secondary": 12500.235,
+    "price_primary": 10500.235,
+    "quantity_order": 200,
+    "quantity_left": true,
+    "february_5-6": 184,
+    "february_7-8": 16
+  },
+  {
+    "price_secondary": 475,
+    "price_primary": 247,
+    "quantity_order": 2,
+    "quantity_left": 2
+  }
+]
