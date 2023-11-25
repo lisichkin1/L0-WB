@@ -64,8 +64,10 @@ payLinkSecond.addEventListener('click', function (ev) {
 function openPopup() {
   popupPay.style.opacity = '1';
   popupPay.style.visibility = 'visible';
+  popupArea.style.visibility = 'visible';
 }
 function closePopup() {
   popupPay.style.opacity = '0';
   popupPay.style.visibility = 'hidden';
+  popupArea.style.visibility = 'hidden';
 }
