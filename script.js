@@ -6,3 +6,4 @@ import './modules/delte.js';
 import './modules/like.js';
 import './modules/hover.js';
 import './modules/radio.js';
+import './modules/deliveryPopup.js';
