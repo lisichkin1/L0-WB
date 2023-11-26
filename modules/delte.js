@@ -5,16 +5,18 @@ document.addEventListener('DOMContentLoaded', function () {
   let deleteButtons = document.querySelectorAll('.item__customization_delete');
 
   deleteButtons.forEach(function (button) {
+    let itemId;
+    let absenceDeleteButton;
     let listItems = document.querySelectorAll('.form__cart__item');
     let cartItem = button.closest('.form__cart__item');
-    let itemId = cartItem.dataset.id;
+    if (cartItem) itemId = cartItem.dataset.id;
     let absenceItem = document.querySelector(`.form__absence__item[data-id="${itemId}"]`);
-    let absenceDeleteButton = absenceItem.querySelector('.item__customization_delete');
-    button.addEventListener('click', function (event) {
+    if (absenceItem) absenceDeleteButton = absenceItem.querySelector('.item__customization_delete');
+    button?.addEventListener('click', function (event) {
       event.preventDefault();
       deleteProduct(cartItem, absenceItem, listItems);
     });
-    absenceDeleteButton.addEventListener('click', function (event) {
+    absenceDeleteButton?.addEventListener('click', function (event) {
       event.preventDefault();
       deleteProduct(cartItem, absenceItem, listItems);
     });
