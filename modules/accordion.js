@@ -5,7 +5,7 @@ let textSpan = document.createElement('span');
 let selectContainer = document.querySelector('.form__cart__select__container');
 let price = document.querySelector('.form__order__result__price__count');
 let productList = document.querySelector('.form__cart__list__js');
-let productListItems = document.querySelectorAll('.form__cart__item');
+
 let quantityProducts = 0;
 let ending = '';
 for (let i = 0; i < hideButtons.length; i++) {
@@ -14,6 +14,7 @@ for (let i = 0; i < hideButtons.length; i++) {
   if (hideButton) {
     hideButton.addEventListener('click', function (ev) {
       ev.preventDefault();
+      let productListItems = document.querySelectorAll('.form__cart__item');
       let panel = this.parentElement.nextElementSibling.nextElementSibling;
       panel.classList.toggle('collapsed');
       hideButton.classList.toggle('rotate');
