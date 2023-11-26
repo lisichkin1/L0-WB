@@ -1103,6 +1103,8 @@
   top: 0;
   left: 0;
   z-index: 10;
+  opacity: 0;
+  visibility: hidden;
 }
 .popup__address__area {
   position: absolute;
