@@ -8,3 +8,4 @@ import './modules/hover.js';
 import './modules/radio.js';
 import './modules/deliveryPopup.js';
 import './modules/accordion.js';
+import './modules/validForm.js';
