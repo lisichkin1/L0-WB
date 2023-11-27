@@ -51,6 +51,6 @@ export function result_price_f() {
       Intl.NumberFormat('ru-RU').format(result_price_no_discount) + ' сом';
   }
   if (discountSpan) {
-    discountSpan.innerHTML = '-' + Intl.NumberFormat('ru-RU').format(discount) + ' сом';
+    discountSpan.innerHTML = '&minus;' + Intl.NumberFormat('ru-RU').format(discount) + ' сом';
   }
 }
