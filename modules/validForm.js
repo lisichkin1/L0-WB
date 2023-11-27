@@ -10,27 +10,52 @@ let emailError = document.querySelector('.email__error');
 let phoneError = document.querySelector('.phone__error');
 let innError = document.querySelector('.inn__error');
 
+let fNameTitle = document.querySelector('.form__recipient__container__up__fName__title');
+let sNameTitle = document.querySelector('.form__recipient__container__up__sName__title');
+let emailTitle = document.querySelector('.form__recipient__container__down__email__title');
+let phoneTitile = document.querySelector('.form__recipient__container__down__phone__title');
+let innTitle = document.querySelector('.form__recipient__container__down__inn__title');
+
 let submit__button = document.querySelector('.submit__button');
 
+let errorFName = false;
 const fNameValidation = (event) => {
   let fNameValue = fName.value.trim();
+  let fNamaCheck = /^[a-zA-Zа-яА-Я]*$/.test(fNameValue);
   const notErrorAlert = () => {
     fNameError.style.opacity = '0';
     fNameError.textContent = '';
     fName.style.color = '#9797af';
     fName.style.borderBottomColor = '#9797af';
+    errorFName = false;
   };
   const errorAlert = () => {
     fNameError.style.opacity = '1';
     fNameError.textContent = 'Укажите имя';
     fName.style.color = '#f55123';
+    errorFName = true;
   };
+  if (fNameValue === '') {
+    fNameTitle.style.opacity = '0';
+  } else {
+    fNameTitle.style.opacity = '1';
+  }
   if (event === 'blur' && fNameValue === '') {
     notErrorAlert();
+  } else if (event === 'input' && errorFName === true) {
+    if (!fNamaCheck) {
+      errorAlert();
+    } else {
+      notErrorAlert();
+    }
   } else if (event === 'input') {
     notErrorAlert();
-  } else if (event === 'blur' && fNameValue !== '') {
-    notErrorAlert();
+  } else if (event === 'blur' && fNameValue !== '' && !fNamaCheck) {
+    if (!fNamaCheck) {
+      errorAlert();
+    } else {
+      notErrorAlert();
+    }
   } else {
     if (fNameValue === '') {
       errorAlert();
@@ -39,9 +64,10 @@ const fNameValidation = (event) => {
     }
   }
 };
-
+let errorSName = false;
 const sNameValidation = (event) => {
   let sNameValue = sName.value.trim();
+  let sNameCheck = /^[a-zA-Zа-яА-Я]*$/.test(sNameValue);
   const notErrorAlert = () => {
     sNameError.style.opacity = '0';
     sNameError.textContent = '';
@@ -54,12 +80,27 @@ const sNameValidation = (event) => {
     sName.style.color = '#f55123';
     sName.style.borderBottomColor = '#f55123';
   };
+  if (sNameValue === '') {
+    sNameTitle.style.opacity = '0';
+  } else {
+    sNameTitle.style.opacity = '1';
+  }
   if (event === 'blur' && sNameValue === '') {
     notErrorAlert();
+  } else if (event === 'input' && errorSName === true) {
+    if (!sNameCheck) {
+      errorAlert();
+    } else {
+      notErrorAlert();
+    }
   } else if (event === 'input') {
     notErrorAlert();
-  } else if (event === 'blur' && sNameValue !== '') {
-    notErrorAlert();
+  } else if (event === 'blur' && sNameValue !== '' && !sNameCheck) {
+    if (!sNameCheck) {
+      errorAlert();
+    } else {
+      notErrorAlert();
+    }
   } else {
     if (sNameValue === '') {
       errorAlert();
@@ -86,6 +127,11 @@ const emailValidation = (event) => {
     email.style.borderBottomColor = '#f55123';
     errorEmail = true;
   };
+  if (emailValue === '') {
+    emailTitle.style.opacity = '0';
+  } else {
+    emailTitle.style.opacity = '1';
+  }
   if (event === 'blur' && emailValue === '') {
     notErrorAlert();
   } else if (event === 'input' && errorEmail === true) {
@@ -137,6 +183,11 @@ const phoneValidation = (event) => {
       phone.value += '-';
     }
   };
+  if (phoneValue === '') {
+    phoneTitile.style.opacity = '0';
+  } else {
+    phoneTitile.style.opacity = '1';
+  }
   if (event === 'focus' && phoneValue === '') {
     phone.value = '+7 ';
   } else if (event === 'blur' && (phoneValue === '+7 ' || phoneValue === '')) {
@@ -190,6 +241,11 @@ const innValidation = (event) => {
     inn.style.borderBottomColor = '#f55123';
     errorInn = true;
   };
+  if (innValue === '') {
+    innTitle.style.opacity = '0';
+  } else {
+    innTitle.style.opacity = '1';
+  }
   if (event === 'blur' && innValue === '') {
     notErrorAlert();
   } else if (event === 'input' && errorInn === true) {
