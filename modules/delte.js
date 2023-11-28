@@ -1,6 +1,7 @@
 import { buttonCheckbox } from './checkbox.js';
 import { result_price_f } from './price.js';
 let QuantityProducts = document.querySelector('.header__navbar__item__count');
+let QuantityProductsMobile = document.querySelector('.header__navbar__item__count__mobile');
 document.addEventListener('DOMContentLoaded', function () {
   let deleteButtons = document.querySelectorAll('.item__customization_delete');
 
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function updateQuantityProducts() {
   let listItems = document.querySelectorAll('.form__cart__item');
   QuantityProducts.innerText = listItems.length > 1 ? listItems.length : '';
+  QuantityProductsMobile.innerText = listItems.length > 1 ? listItems.length : '';
 }
 function deleteProduct(cartItem, absenceItem, listItems) {
   if (cartItem && absenceItem) {
