@@ -195,7 +195,7 @@
 .form__cart__select__input:checked + .form__cart__select__text::before {
   border-color: #0b76ef;
   background-color: #cb11ab;
-  background-image: url('/img/Path\ Copy\ 2\ \(Stroke\).svg');
+  background-image: url('img/Path\ Copy\ 2\ \(Stroke\).svg');
   background-position: 60% 50%;
   background-size: 60%;
   background-repeat: no-repeat;
