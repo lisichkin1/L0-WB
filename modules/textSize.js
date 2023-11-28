@@ -2,6 +2,7 @@ import { processPriceProduct } from './priceProduct.js';
 import { result_price_f } from './price.js';
 import { quantityProducts } from './quantity.js';
 import { hover } from './hover.js';
+
 document.addEventListener('DOMContentLoaded', function () {
   fetch('data.json')
     .then((response) => response.json())
@@ -21,4 +22,17 @@ document.addEventListener('DOMContentLoaded', function () {
       hover();
     })
     .catch((error) => console.error('Error loading JSON:', error));
+});
+let email = document.querySelector('.form__recipient__email');
+if (window.innerWidth <= 550) {
+  email.placeholder = 'Электронная почта';
+} else {
+  email.placeholder = 'Почта';
+}
+window.addEventListener('resize', function () {
+  if (window.innerWidth <= 550) {
+    email.placeholder = 'Электронная почта';
+  } else {
+    email.placeholder = 'Почта';
+  }
 });
