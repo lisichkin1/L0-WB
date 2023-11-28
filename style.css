@@ -1507,6 +1507,11 @@
   }
   .nav__mobile {
     display: block;
+    position: fixed;
+    left: 0;
+    bottom: -6px;
+    z-index: 20;
+    width: 100%;
   }
 }
 @media (max-width: 550px) {
@@ -1727,7 +1732,7 @@
     width: 22px;
   }
   .footer {
-    padding: 47px 0 0 0;
+    padding: 47px 0 47px 0;
   }
   .form__delivery__text__popup__first {
     top: -60px;
