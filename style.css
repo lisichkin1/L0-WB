@@ -1763,10 +1763,17 @@
   }
   .popup__card__button {
     margin-top: auto;
+    margin-bottom: 40px;
   }
   .popup__pay__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  .popup__courier__button {
+    width: 100%;
+  }
+  .popup__address__content .popup__content {
+    height: 80%;
   }
 }
