@@ -58,16 +58,16 @@ export function hover() {
       hoverIcon.addEventListener('mouseleave', function () {
         if (popup) popup.style.display = 'none';
       });
-      if (hoverDiscount) {
-        hoverDiscount.addEventListener('mouseenter', function () {
-          if (popupDiscount) popupDiscount.style.display = 'flex';
-        });
-      }
-      if (hoverDiscount) {
-        hoverDiscount.addEventListener('mouseleave', function () {
-          if (popupDiscount) popupDiscount.style.display = 'none';
-        });
-      }
+    }
+    if (hoverDiscount) {
+      hoverDiscount.addEventListener('mouseenter', function () {
+        if (popupDiscount) popupDiscount.style.display = 'flex';
+      });
+    }
+    if (hoverDiscount) {
+      hoverDiscount.addEventListener('mouseleave', function () {
+        if (popupDiscount) popupDiscount.style.display = 'none';
+      });
     }
   });
 }
