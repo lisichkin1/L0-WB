@@ -31,6 +31,12 @@ export function quantityProducts(data) {
       if (item.quantity_left !== true && counter >= item.quantity_order + item.quantity_left) {
         plusButton.disabled = true;
         minusButton.disabled = false;
+        plusButton.style.color = '#00000033';
+        minusButton.style.color = '#000000';
+      }
+      if (counter > 1) {
+        minusButton.disabled = false;
+        minusButton.style.color = '#000000';
       }
 
       quantityContainer.innerText = counter;
@@ -71,8 +77,13 @@ export function quantityProducts(data) {
       if (item.quantity_left !== true && counter == 1) {
         minusButton.disabled = true;
         plusButton.disabled = false;
+        plusButton.style.color = '#000000';
+        minusButton.style.color = '#00000033';
       }
-
+      if (counter <= item.quantity_order + item.quantity_left) {
+        plusButton.disabled = false;
+        plusButton.style.color = '#000000';
+      }
       quantityContainer.innerText = counter;
       if (item.quantity_left !== true) {
         remains_count.innerText = item.quantity_left + item.quantity_order - counter;
