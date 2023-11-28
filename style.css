@@ -437,7 +437,7 @@
 .form__cart__item__price__popup {
   position: absolute;
   top: 52px;
-  right: -8px;
+  right: 6px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
@@ -918,11 +918,11 @@
   width: 288px;
   display: none;
 }
-.form__delivery__text .form__delivery__text__popup {
+.form__delivery__text__popup__first {
   top: 24px;
   left: 220px;
 }
-.form__order__delivery__down__js .form__delivery__text__popup {
+.form__delivery__text__popup__second {
   top: 48px;
   left: -6%;
 }
@@ -1728,5 +1728,40 @@
   }
   .footer {
     padding: 47px 0 0 0;
+  }
+  .form__delivery__text__popup__first {
+    top: -60px;
+    left: 40px;
+  }
+  .form__delivery__text__popup__second {
+    top: -30px;
+    left: 0;
+  }
+  .popup__address__body,
+  .popup__pay__body {
+    padding: 0;
+  }
+  .popup__address__content,
+  .popup__address__body,
+  .popup__pay__content,
+  .popup__pay__body {
+    height: 100%;
+  }
+  .popup__address__content,
+  .popup__pay__content {
+    border-radius: 0;
+  }
+  .popup__pay__body,
+  .popup__pay__content {
+    min-width: 320px;
+    width: 100%;
+  }
+  .popup__card__button {
+    margin-top: auto;
+  }
+  .popup__pay__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
