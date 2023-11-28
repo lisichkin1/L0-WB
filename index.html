@@ -32,12 +32,53 @@
               />
             </svg>
           </button>
-          <h1 class="logo">
-            <a href="/" class="logo__link"
-              >ТОВАРЫ<br />
-              И ТОЧКА</a
+          <button aria-label="Меню" class="header__menu__button__mobile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
             >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.75 6C2.75 5.30964 3.30964 4.75 4 4.75H24C24.6904 4.75 25.25 5.30964 25.25 6C25.25 6.69036 24.6904 7.25 24 7.25H4C3.30964 7.25 2.75 6.69036 2.75 6Z"
+                fill="white"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.75 14C2.75 13.3096 3.30964 12.75 4 12.75H24C24.6904 12.75 25.25 13.3096 25.25 14C25.25 14.6904 24.6904 15.25 24 15.25H4C3.30964 15.25 2.75 14.6904 2.75 14Z"
+                fill="white"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.75 22C2.75 21.3096 3.30964 20.75 4 20.75H18C18.6904 20.75 19.25 21.3096 19.25 22C19.25 22.6904 18.6904 23.25 18 23.25H4C3.30964 23.25 2.75 22.6904 2.75 22Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <h1 class="logo">
+            <a href="/" class="logo__link">ТОВАРЫ И ТОЧКА</a>
           </h1>
+          <div class="header__search__icon__mobile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.99886 12C5.99886 10.4087 6.631 8.88258 7.75622 7.75736C8.88143 6.63214 10.4076 6 11.9989 6C13.5902 6 15.1163 6.63214 16.2415 7.75736C17.3667 8.88258 17.9989 10.4087 17.9989 12C17.9989 13.5913 17.3667 15.1174 16.2415 16.2426C15.1163 17.3679 13.5902 18 11.9989 18C10.4076 18 8.88143 17.3679 7.75622 16.2426C6.631 15.1174 5.99886 13.5913 5.99886 12ZM11.9989 4C10.7257 4.00018 9.471 4.30422 8.339 4.88684C7.20699 5.46946 6.23038 6.31384 5.49034 7.3498C4.7503 8.38577 4.26819 9.5834 4.08409 10.8432C3.89998 12.1029 4.0192 13.3884 4.43183 14.5928C4.84446 15.7973 5.53859 16.8858 6.45652 17.768C7.37446 18.6502 8.48969 19.3006 9.70953 19.6651C10.9294 20.0296 12.2186 20.0977 13.4701 19.8638C14.7215 19.6298 15.8991 19.1006 16.9049 18.32L22.4339 23.85C22.6215 24.0375 22.8759 24.1428 23.1412 24.1427C23.4065 24.1426 23.6608 24.0371 23.8484 23.8495C24.0359 23.6619 24.1412 23.4074 24.1411 23.1421C24.141 22.8769 24.0355 22.6225 23.8479 22.435L18.3179 16.905C19.2356 15.7225 19.8032 14.3063 19.9561 12.8173C20.109 11.3283 19.8411 9.82621 19.1829 8.48188C18.5246 7.13754 17.5024 6.00485 16.2324 5.21256C14.9625 4.42027 13.4957 4.00017 11.9989 4Z"
+                fill="white"
+              />
+            </svg>
+          </div>
         </div>
         <div class="header__search">
           <input type="search" class="header__search__input" placeholder="Я ищу..." />
@@ -211,7 +252,10 @@
                   </div>
                   <div class="form__cart__item__customization">
                     <div class="form__cart__item__buttons">
-                      <button class="form__cart__item__button form__cart__item__minus">
+                      <button
+                        class="form__cart__item__button form__cart__item__minus form__cart__item__minus__first"
+                        disabled
+                      >
                         &#8722;
                       </button>
                       <span class="form__cart__item__quantity">1</span>
@@ -428,7 +472,7 @@
                       шестигранные, Faber-Castell
                     </p>
 
-                    <div class="form__cart__item__institution">
+                    <div class="form__cart__item__institution form__cart__item__institution__last">
                       <span>Коледино WB</span>
                       <div class="form__cart__item__institution__secondary">
                         <span>OOО Вайлдберриз</span
@@ -568,7 +612,9 @@
                       <span>Размер: 56</span>
                     </div>
                   </div>
-                  <div class="form__cart__item__customization">
+                  <div
+                    class="form__cart__item__customization form__cart__item__customization__absence"
+                  >
                     <div class="item__customization">
                       <button class="item__customization_like">
                         <svg
@@ -616,7 +662,6 @@
                       </button>
                     </div>
                   </div>
-                  <div class="form__cart__item__price"></div>
                 </div>
                 <div class="form__absence__item" data-id="2">
                   <div class="from__absencet__item__img">
@@ -633,7 +678,9 @@
                       <span>Цвет: прозрачный</span>
                     </div>
                   </div>
-                  <div class="form__cart__item__customization">
+                  <div
+                    class="form__cart__item__customization form__cart__item__customization__absence"
+                  >
                     <div class="item__customization">
                       <button class="item__customization_like">
                         <svg
@@ -681,7 +728,6 @@
                       </button>
                     </div>
                   </div>
-                  <div class="form__cart__item__price"></div>
                 </div>
                 <div class="form__absence__item" data-id="3">
                   <div class="from__absencet__item__img">
@@ -696,7 +742,9 @@
                       class="form__cart__item__characteristic from__absencet__item__characteristic"
                     ></div>
                   </div>
-                  <div class="form__cart__item__customization">
+                  <div
+                    class="form__cart__item__customization form__cart__item__customization__absence"
+                  >
                     <div class="item__customization">
                       <button class="item__customization_like">
                         <svg
@@ -744,7 +792,6 @@
                       </button>
                     </div>
                   </div>
-                  <div class="form__cart__item__price"></div>
                 </div>
               </div>
             </div>
@@ -1012,7 +1059,7 @@
                 </div>
                 <div class="form__order__result__details">
                   <div class="form__order__result__quantity">
-                    <span>203 товара</span
+                    <span class="form__order__result__quantity__number">203 товара</span
                     ><span class="form__order__result__quantity_nodiscount">2 302 048 сом</span>
                   </div>
                   <div class="form__order__result__discount">
