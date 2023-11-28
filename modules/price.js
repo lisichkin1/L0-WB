@@ -19,7 +19,7 @@ export function result_price_f() {
     let secondaryText = priceProduct.querySelector('.form__cart__item__price_secondary');
     let quantityText = product.querySelector('.form__cart__item__quantity');
     let checkboxItem = product.querySelector('.form__cart__select__input__item');
-    console.log(checkboxItem.checked);
+
     if (primaryText && checkboxItem && checkboxItem.checked) {
       priceValue = parseFloat(
         primaryText.innerText

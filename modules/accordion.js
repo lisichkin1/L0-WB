@@ -10,7 +10,7 @@ let quantityProducts = 0;
 let ending = '';
 for (let i = 0; i < hideButtons.length; i++) {
   let hideButton = hideButtons[i];
-  console.log(hideButton);
+
   if (hideButton) {
     hideButton.addEventListener('click', function (ev) {
       ev.preventDefault();
@@ -47,7 +47,7 @@ for (let i = 0; i < hideButtons.length; i++) {
           default:
             ending = 'ов';
         }
-        console.log(ending);
+
         selectItem.style.display = 'none';
         textSpan.className = 'form__cart__select__text';
         textSpan.innerText = quantityProducts + ' товар' + ending + ' · ' + price.innerText;

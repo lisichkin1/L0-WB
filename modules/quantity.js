@@ -124,7 +124,6 @@ export function quantityProducts(data) {
       }
     }
     updatePrice(itemContainer, item, counter);
-    console.log('апдейт');
   });
   function updatePrice(itemContainer, item, counter) {
     let currencySpan = document.createElement('span');

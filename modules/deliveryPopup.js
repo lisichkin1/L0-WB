@@ -46,7 +46,7 @@ button.addEventListener('click', function (ev) {
     let popupItem = courierBlock
       .querySelector('.popup__text__item__input__courier:checked')
       .closest('.popup__text__item__container__courier');
-    console.log(popupItem);
+
     let newAddress = popupItem.querySelector('.popup__text__item__span__courier');
     starContainer.style.display = 'none';
     oldAddressFirst.innerText = newAddress.innerText;
