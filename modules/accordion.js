@@ -18,7 +18,8 @@ for (let i = 0; i < hideButtons.length; i++) {
       let panel = this.parentElement.nextElementSibling.nextElementSibling;
       panel.classList.toggle('collapsed');
       hideButton.classList.toggle('rotate');
-      if (productList.classList.contains('collapsed')) {
+      if (panel.classList.contains('collapsed')) {
+        panel.style.overflow = 'hidden';
         quantityProducts = 0;
         productListItems.forEach((element) => {
           let quantityProductsItems = element.querySelector('.form__cart__item__quantity');
@@ -55,6 +56,7 @@ for (let i = 0; i < hideButtons.length; i++) {
         selectContainer.appendChild(textSpan);
         selectContainer.style.flexDirection = 'row-reverse';
       } else {
+        panel.style.overflow = 'visible';
         selectItem.style.display = 'inline-block';
         textSpan.style.display = 'none';
         selectContainer.style.flexDirection = 'row';
